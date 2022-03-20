@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/mystyle.css">
+</head>
+<body>
+<div class="sentMessageBody">
+    <h1 class="title">Sent message</h1>
+    <p></p>
+    <p class="pResult" th:text="'bootstrapServers: ' + ${messageForm.getBootstrapServer()}"></p>
+    <p class="pResult" th:text="'topic: ' + ${messageForm.getTopic()}"></p>
+
+    <p class="pResult" th:text="'deviceScreenName: ' + ${messageForm.getDeviceScreenName()}"></p>
+    <p class="pResult" th:text="'eventCategory: ' + ${messageForm.getEventCategory()}"></p>
+    <p class="pResult" th:text="'eventName: ' + ${messageForm.getEventName()}"></p>
+    <p class="pResult" th:text="'eventLabel: ' + ${messageForm.getEventLabel()}"></p>
+    <p class="pResult" th:text="'dimension_7: ' + ${messageForm.dimension7}"></p>
+    <p class="pResult" th:text="'dimension_20: ' + ${messageForm.dimension20}"></p>
+    <p class="pResult" th:text="'timestamp: ' + ${messageForm.getTimestamp()}"></p>
+    <a href="/api/send" class="submit">Submit another message</a>
+</div>
+</body>
+</html>

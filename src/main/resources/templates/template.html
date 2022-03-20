@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>MetricaTester</title>
+    <link rel="stylesheet" href="/mystyle.css">
+</head>
+<body>
+<div class="form">
+<h2 class="title">Metrica Tester</h2>
+<form action="#" th:action="@{/api/send}" th:object="${messageForm}" method="post">
+    <h3 class="subtitle"> Server config </h3>
+    <div class="input-container ic2">
+        <input type="text" id="bootstrapServers" name="bootstrapServer" value="localhost:9092" class="input" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="bootstrapServers" class="placeholder">bootstrap servers:</label>
+    </div>
+    <div class="input-container ic2">
+        <input type="text" id="topic" name="topic" value="raw.am.retail_event" class="input" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="topic" class="placeholder">topic:</label>
+    </div>
+<br>
+    <h3 class="subtitle"> Message </h3>
+    <div class="input-container ic2">
+        <input type="text" id="deviceScreenName" name="deviceScreenName" class="input" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="deviceScreenName" class="placeholder">deviceScreenName:</label>
+    </div>
+
+    <div class="input-container ic2">
+        <input type="text" id="eventCategory" name="eventCategory" value="Investments" class="input" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="eventCategory" class="placeholder">eventCategory:</label>
+    </div>
+
+    <div class="input-container ic2">
+        <input type="text" id="eventName" name="eventName" class="input" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="eventName" class="placeholder">eventName:</label>
+    </div>
+
+    <div class="input-container ic2">
+        <input type="text" id="eventLabel" name="eventLabel" class="input" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="eventLabel" class="placeholder">eventLabel:</label>
+    </div>
+
+    <div class="input-container ic2">
+        <input type="text" id="dimension7" name="dimension7" value="INVESTBOX" class="input" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="dimension7" class="placeholder">dimension_7:</label>
+    </div>
+
+    <div class="input-container ic2">
+        <input type="text" id="dimension20" name="dimension20" class="input" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="dimension20" class="placeholder">dimension_20:</label>
+    </div>
+
+    <div class="input-container ic2">
+        <input type="text" id="timestamp" name="timestamp" class="input" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="timestamp" class="placeholder">timestamp:</label>
+    </div>
+    <input value="Send" type="submit" class="submit">
+</form>
+</div>
+</body>
+</html>
